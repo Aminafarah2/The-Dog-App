@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "./Breed.css"
-import "./Home.css"
-import "./Search.css"
+import "./index.css"
 import App from './App';
 
 

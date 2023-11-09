@@ -1,21 +1,32 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './pages/Home';  // Correct the import path
-import BreedDetails from './pages/BreedDetails';  // Correct the import path
-import Search from './pages/Search';  // Correct the import path
-
-function App() {
+import React from "react";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Favorites  from "./pages/Favorites";
+// import {BrowserRouter,Route,Routes} from "react-router-dom";
+ const App=()=>{
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/breed/:breedId" element={<BreedDetails />} />
-        <Route path="/search" element={<Search />} />
-      </Routes>
-    </Router>
-  );
-}
+    <div>
+    {/* <BrowserRouter> */}
+    <Navbar/>
+    <Home/>
+    <Favorites/>
+    {/* <Routes> */}
+      {/* <Route path="/" element={<Home/>}/> */}
+      {/* <Route path="favorites" element={<Favorites/>}/> */}
 
-export default App;
+    {/* </Routes> */}
+    
+    
+    
+    
+    {/* </BrowserRouter> */}
+    </div>
+  )
+ }
+
+
+
+
+
+
+ export default App;
