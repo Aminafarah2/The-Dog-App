@@ -1,22 +1,20 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './pages/Home';  // Correct the import path
+import BreedDetails from './pages/BreedDetails';  // Correct the import path
+import Search from './pages/Search';  // Correct the import path
 
-import MeetDogs from "./components/MeetDogs";
-import Layout from "./components/Layout";
-import Home from "./components/Home";
-import Adopt from "./components/Adopt";
-import {BrowserRouter,Routes,Route} from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-    <BrowserRouter>
-    <Routes>
-     <Route path="/"  element={<Layout />} >
-        <Route index  element={ < Home  />} />
-        <Route path="Adopt"  element={ <Adopt />} />
-        <Route path="MeetDogs"  element={ <MeetDogs/>} />
-     </Route>
-    </Routes>
-    </BrowserRouter>
-   </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/breed/:breedId" element={<BreedDetails />} />
+        <Route path="/search" element={<Search />} />
+      </Routes>
+    </Router>
   );
 }
 
